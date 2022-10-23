@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "target": "ES2015",
+    "noEmit": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.test.tsx", "**/*.test.ts"]
+}
