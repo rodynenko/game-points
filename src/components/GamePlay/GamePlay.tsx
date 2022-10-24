@@ -9,7 +9,7 @@ const GamePlayList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin: 0 -0.5rem;
-  list-style: none
+  list-style: none;
 `
 
 const GamePlayItem = styled.li`

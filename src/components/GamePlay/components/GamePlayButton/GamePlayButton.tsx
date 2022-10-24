@@ -11,8 +11,9 @@ interface GamePlayButton {
 }
 
 const GamePlayButtonBtn = styled(Button)`
-  width: 4rem;
-  height: 4rem;
+  --button-size: 5rem;
+  width: var(--button-size);
+  height: var(--button-size);
 `
 
 const GamePlayButton = ({ itemKey }: GamePlayButton) => {
