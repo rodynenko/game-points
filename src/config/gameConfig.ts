@@ -10,14 +10,10 @@ export type GameItemKeys = keyof typeof gameItems
 type BonusPoints = number
 type ItemAmount = number
 
-type BonusStrategy = [ItemAmount, BonusPoints]
-type ItemBonusStrategies = Record<GameItemKeys, BonusStrategy[]>
+export type BonusStrategy = [ItemAmount, BonusPoints]
+type ItemBonusStrategies = Partial<Record<GameItemKeys, BonusStrategy>>
 
 export const itemBonusStrategies = {
-  'a': [
-    [3, 50]
-  ],
-  'b': [
-    [2, 30]
-  ]
+  'a': [3, 50],
+  'b': [2, 30]
 } as ItemBonusStrategies
