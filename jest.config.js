@@ -5,5 +5,5 @@ module.exports = {
   testPathIgnorePatterns: ['node_modules', 'public'],
   setupFilesAfterEnv: ['<rootDir>/jest/setupTests.js'],
   testEnvironment: 'jsdom',
-  modulePaths: ['node_modules', '<rootDir>/src']
+  modulePaths: ['node_modules', '<rootDir>/src', '<rootDir>/jest']
 }
