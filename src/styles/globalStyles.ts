@@ -5,6 +5,7 @@ export const globalStyles = css`
 
   :root {
     --text-color: #333;
+    --outline-color: #45a3e5;
   }
 
   body {

@@ -12,6 +12,15 @@ const Button = styled.button`
   box-shadow: none;
   cursor: pointer;
   transition: box-shadow .1s ease-in-out;
+  outline: 0;
+
+  html:not([data-whatintent=touch]) &:hover {
+    
+  }
+
+  html[data-whatinput=keyboard]) &:focus {
+    box-shadow: 0 0 3px var(--outline-color);
+  }
 
   &:active {
     box-shadow: 0 0 5px var(--text-color);

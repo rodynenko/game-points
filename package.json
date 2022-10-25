@@ -21,7 +21,8 @@
     "redux": "^4.2.0",
     "reselect": "^4.1.6",
     "typescript": "^4.8.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "what-input": "^5.2.12"
   },
   "scripts": {
     "start": "react-app-rewired start",
