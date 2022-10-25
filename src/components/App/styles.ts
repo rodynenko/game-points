@@ -18,7 +18,8 @@ export const Main = styled.main``
 export const Aside = styled.aside`
   display: flex;
   flex-direction: column;
-  border-left: 1px solid black;
+  border-left: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
 `
 
 export const AsideHeader = styled.h2`
