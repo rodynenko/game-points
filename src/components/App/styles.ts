@@ -10,7 +10,11 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr min(40vw, 500px);
   height: 100vh;
-  height: max(100vh, 700px);
+  height: min(100vh, 820px);
+
+  @media (max-width: 568px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const Main = styled.main``
@@ -18,8 +22,7 @@ export const Main = styled.main``
 export const Aside = styled.aside`
   display: flex;
   flex-direction: column;
-  border-left: 1px solid var(--text-color);
-  border-right: 1px solid var(--text-color);
+  border: 1px solid var(--text-color);
 `
 
 export const AsideHeader = styled.h2`

@@ -11,6 +11,11 @@ const SummaryNewGameWrapper = styled.div`
   justify-content: flex-end;
 `
 
+const NewGameButton = styled(Button)`
+  padding: 1.5rem 1rem;
+  background-color: #ddd;
+`
+
 const SummaryNewGame = () => {
   const dispatch = useDispatch()
   const onResetClick = () => {
@@ -19,7 +24,7 @@ const SummaryNewGame = () => {
 
   return (
     <SummaryNewGameWrapper>
-      <Button onClick={onResetClick}>New game</Button>
+      <NewGameButton onClick={onResetClick}>New game</NewGameButton>
     </SummaryNewGameWrapper>
   )
 }

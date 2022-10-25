@@ -7,7 +7,8 @@ import { commonSummaryBox } from '../styles'
 const SummaryBonusesWrapper = styled.div`
   ${commonSummaryBox}
   width: 100%;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--text-color);
+  font-size: 1.5rem;
 
   span + span {
     margin-left: 1rem;

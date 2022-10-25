@@ -7,6 +7,7 @@ import { commonSummaryBox } from '../styles'
 const SummaryTotalScoreWrapper = styled.div`
   ${commonSummaryBox}
   width: 50%;
+  font-size: 1.5rem;
   span + span {
     margin-left: 1rem;
   }
