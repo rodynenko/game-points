@@ -17,6 +17,9 @@ export const addNewUserItem = createAction<ItemKey>('game/add-new-user-item')
 export const gameReducer = createReducer<GameReducerState>(initialState, (builder) => {
   builder.addCase(resetAction, () => initialState)
   builder.addCase(addNewUserItem, (state, { payload: itemKey }) => {
-    state.items[itemKey] = addOneToItem(state.items[itemKey], gameItems[itemKey])
+    const nextValue = addOneToItem(state.items[itemKey], gameItems[itemKey])
+    if (nextValue) {
+      state.items[itemKey] = nextValue
+    }
   })
 })
