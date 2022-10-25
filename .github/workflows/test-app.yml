@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build_test:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -22,5 +22,24 @@ jobs:
           npm ci
           npm run tslint
           npm run test
-      - name: Build the app
-        run: npm run build
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.x
+          cache: npm
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build
+      - run : |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git --work-tree build add --all
+          git commit -m "Automatic Build and Deploy run by GitHub Actions"
+          git push origin HEAD:gh-pages --force
