@@ -16,6 +16,7 @@ module.exports = {
 		sourceType: 'module',
 	},
 	rules: {
+		'quotes': ['error', 'single'],
     'semi': ['error', 'never'],
 		'react/no-unknown-property': ['error', { ignore: ['class'] }],
 		'react/prop-types': 0,

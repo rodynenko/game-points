@@ -1,19 +1,28 @@
-export const gameItems = {
-  'a': 50,
-  'b': 30,
-  'c': 20,
-  'd': 15
+import { GameItems } from 'types'
+
+export const gameItems: GameItems = {
+  a: {
+    label: 'A',
+    points: 50,
+    bonusStrategy: {
+      amountForBonus: 3,
+      points: 50
+    }
+  },
+  b: {
+    label: 'B',
+    points: 30,
+    bonusStrategy: {
+      amountForBonus: 2,
+      points: 30
+    }
+  },
+  c: {
+    label: 'C',
+    points: 20
+  },
+  d: {
+    label: 'D',
+    points: 15
+  }
 }
-
-export type GameItemKeys = keyof typeof gameItems
-
-type BonusPoints = number
-type ItemAmount = number
-
-export type BonusStrategy = [ItemAmount, BonusPoints]
-type ItemBonusStrategies = Partial<Record<GameItemKeys, BonusStrategy>>
-
-export const itemBonusStrategies = {
-  'a': [3, 50],
-  'b': [2, 30]
-} as ItemBonusStrategies

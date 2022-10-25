@@ -20,7 +20,7 @@ const ResultBoard = memo(() => {
     <ResultBoardList>
       {items.map((item) => (
         <ResultBoardItem key={item.key}>
-          <ResultBoardRow label={item.key} amount={item.amount} />
+          <ResultBoardRow label={item.label} amount={item.amount} totalPoints={item.totalPoints} />
         </ResultBoardItem>
       ))}
     </ResultBoardList>

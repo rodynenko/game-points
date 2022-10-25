@@ -1,28 +1,22 @@
 import { createReducer, createAction } from '@reduxjs/toolkit'
-import { GameItemKeys } from 'config/gameConfig'
-import { calculateTotal } from 'utils/calculateTotal'
+import { ItemKey, GameStoreItem } from 'types'
+import { addOneToItem } from 'utils/addOneToItem'
+import { gameItems } from 'config/gameConfig'
 
 export interface GameReducerState {
-  items: Partial<Record<GameItemKeys, number>>,
-  bonuses: number,
-  totalScore: number
+  items: Record<ItemKey, GameStoreItem>
 }
 
 const initialState: GameReducerState = {
-  items: { },
-  bonuses: 0,
-  totalScore: 0
+  items: { }
 }
 
 export const resetAction = createAction('game/reset')
-export const addNewUserItem = createAction<GameItemKeys>('game/add-new-user-item')
+export const addNewUserItem = createAction<ItemKey>('game/add-new-user-item')
 
 export const gameReducer = createReducer<GameReducerState>(initialState, (builder) => {
   builder.addCase(resetAction, () => initialState)
-  builder.addCase(addNewUserItem, (state, { payload: newItemKey }) => {
-    state.items[newItemKey] = (state.items[newItemKey] || 0) + 1
-    const { bonuses, totalScore } = calculateTotal(state.items)
-    state.bonuses = bonuses
-    state.totalScore = totalScore
+  builder.addCase(addNewUserItem, (state, { payload: itemKey }) => {
+    state.items[itemKey] = addOneToItem(state.items[itemKey], gameItems[itemKey])
   })
 })

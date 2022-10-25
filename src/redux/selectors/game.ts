@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit'
-import { GameItemKeys } from 'config/gameConfig'
+import { gameItems } from 'config/gameConfig'
 import { RootState } from 'redux/store'
 
 const selectGame = (state: RootState) => state.game
@@ -11,19 +11,21 @@ export const selectUserItems = createSelector(
 
 export const selectUserItemsList = createSelector(
   selectUserItems,
-  (items) => (Object.keys(items) as GameItemKeys[]).map((key) => ({
+  (items) => Object.keys(items).map((key) => ({
     key,
-    amount: items[key] || 0
+    label: gameItems[key].label,
+    amount: items[key].amount,
+    totalPoints: items[key].totalPoints
   })).filter((t) => Boolean(t.amount))
 )
 
 export const getUserBonuses = createSelector(
-  selectGame,
-  (gameState) => gameState.bonuses
+  selectUserItems,
+  (items) => Object.keys(items).reduce((prev, currKey) => prev + items[currKey].bonuses, 0)
 )
 
 export const getUserTotalScore = createSelector(
-  selectGame,
-  (gameState) => gameState.totalScore
+  selectUserItems,
+  (items) => Object.keys(items).reduce((prev, currKey) => prev + items[currKey].totalPoints, 0)
 )
 
