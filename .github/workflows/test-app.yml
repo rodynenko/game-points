@@ -23,4 +23,4 @@ jobs:
           npm run tslint
           npm run test
       - name: Build the app
-        run: npm build
+        run: npm run build

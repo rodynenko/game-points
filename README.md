@@ -4,7 +4,7 @@
 
 ## Requirements from local development
 
-* use Node16+
+* use NodeJS v16.13+
 
 ## Available Scripts
 
