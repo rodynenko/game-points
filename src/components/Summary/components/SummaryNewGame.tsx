@@ -12,7 +12,7 @@ const SummaryNewGameWrapper = styled.div`
 `
 
 const NewGameButton = styled(Button)`
-  padding: 1.5rem 1rem;
+  padding: 1rem;
   background-color: #ddd;
 `
 
