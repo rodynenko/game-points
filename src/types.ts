@@ -7,6 +7,7 @@ export interface BonusStrategy {
 
 export interface GameItemConfig {
   label: string,
+  color: string,
   points: number,
   bonusStrategy?: BonusStrategy
 }

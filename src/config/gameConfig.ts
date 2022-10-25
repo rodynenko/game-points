@@ -3,6 +3,7 @@ import { GameItems } from 'types'
 export const gameItems: GameItems = {
   a: {
     label: 'A',
+    color: 'blue-1',
     points: 50,
     bonusStrategy: {
       amountForBonus: 3,
@@ -11,6 +12,7 @@ export const gameItems: GameItems = {
   },
   b: {
     label: 'B',
+    color: 'green-1',
     points: 30,
     bonusStrategy: {
       amountForBonus: 2,
@@ -19,10 +21,12 @@ export const gameItems: GameItems = {
   },
   c: {
     label: 'C',
+    color: 'red-1',
     points: 20
   },
   d: {
     label: 'D',
+    color: 'orange-1',
     points: 15
   }
 }

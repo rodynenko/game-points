@@ -18,6 +18,7 @@ module.exports = {
 	rules: {
 		'quotes': ['error', 'single'],
     'semi': ['error', 'never'],
+		'max-len': ["error", { "code": 100 }],
 		'react/no-unknown-property': ['error', { ignore: ['class'] }],
 		'react/prop-types': 0,
 		'react/display-name': 0,

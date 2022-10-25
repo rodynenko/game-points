@@ -9,6 +9,10 @@ export const globalStyles = css`
     --outline-color: #45a3e5;
     --color-purple-0: #c2a5df;
     --color-purple-2: #46178f;
+    --color-blue-1: #45a3e5;
+    --color-red-1: #ff3355;
+    --color-green-1: #66bf39;
+    --color-orange-1: #f5a23d;
   }
 
   body {
