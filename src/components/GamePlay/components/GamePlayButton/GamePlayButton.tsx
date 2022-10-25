@@ -1,13 +1,13 @@
 import React, { useCallback } from 'react'
 import styled from '@emotion/styled'
-import { GameItemKeys } from 'config/gameConfig'
 import { useDispatch } from 'react-redux'
 import { addNewUserItem } from 'redux/reducers/gameReducer'
 import Button from 'components/Button'
+import { ItemKey } from 'types'
 
 
 interface GamePlayButton {
-  itemKey: GameItemKeys
+  itemKey: ItemKey
 }
 
 const GamePlayButtonBtn = styled(Button)`

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { GameItemKeys, gameItems } from 'config/gameConfig'
+import { gameItems } from 'config/gameConfig'
 import GamePlayButton from './components/GamePlayButton'
 
 const GamePlayList = styled.ul`
@@ -18,12 +18,12 @@ const GamePlayItem = styled.li`
 `
 
 const GamePlay = () => {
-  const items = Object.keys(gameItems) as Array<GameItemKeys>
+  const items = Object.keys(gameItems)
   return (
     <GamePlayList>
       {items.map((item) => (
         <GamePlayItem key={item}>
-          <GamePlayButton  itemKey={item} />
+          <GamePlayButton itemKey={item} />
         </GamePlayItem>
       ))}
     </GamePlayList>
