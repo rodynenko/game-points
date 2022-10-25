@@ -9,7 +9,8 @@ export const FluidContainer = styled.div`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr min(40vw, 500px);
-  min-height: 100vh;
+  height: 100vh;
+  height: max(100vh, 700px);
 `
 
 export const Main = styled.main``
@@ -18,4 +19,10 @@ export const Aside = styled.aside`
   display: flex;
   flex-direction: column;
   border-left: 1px solid black;
+`
+
+export const AsideHeader = styled.h2`
+  margin: 0;
+  padding: 0.5rem;
+  background-color: var(--color-purple-0);
 `

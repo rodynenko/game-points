@@ -2,7 +2,11 @@ import React, { useEffect, useRef } from 'react'
 import styled from '@emotion/styled'
 
 const PageTitleHeader = styled.h1`
-  border-bottom: 1px solid var(--text-color);
+  margin: 0;
+  padding: 1rem 0.5rem;
+  background-color: var(--color-purple-2);
+  color: var(--contrast-color);
+  outline: 0;
 `
 
 interface PageTitleProps {

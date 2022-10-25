@@ -5,7 +5,10 @@ export const globalStyles = css`
 
   :root {
     --text-color: #333;
+    --contrast-color: #fff;
     --outline-color: #45a3e5;
+    --color-purple-0: #c2a5df;
+    --color-purple-2: #46178f;
   }
 
   body {
