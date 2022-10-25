@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from '@emotion/styled'
 
 const PageTitleHeader = styled.h1`
@@ -10,8 +10,14 @@ interface PageTitleProps {
 }
 
 const PageTitle = ({ children }: PageTitleProps) => {
+  const titleRef = useRef<HTMLHeadingElement>(null)
+
+  useEffect(() => {
+    // hack for SPA to notify the user that we are on the page
+    titleRef.current?.focus()
+  }, [])
   return (
-    <PageTitleHeader>{children}</PageTitleHeader>
+    <PageTitleHeader ref={titleRef} tabIndex={-1}>{children}</PageTitleHeader>
   )
 }
 
