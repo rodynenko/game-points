@@ -14,7 +14,7 @@ const SummaryBonusesWrapper = styled.div`
   }
 `
 
-const id = `summary-bonus-points`
+const id = 'summary-bonus-points'
 
 const SummaryBonuses = memo(() => {
   const bonuses = useSelector(getUserBonuses)

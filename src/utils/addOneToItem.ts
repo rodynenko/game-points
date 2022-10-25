@@ -1,5 +1,5 @@
-import { GameStoreItem, GameItemConfig } from "types";
-import { getBonuses } from "./getBonuses";
+import { GameStoreItem, GameItemConfig } from 'types'
+import { getBonuses } from './getBonuses'
 
 export const addOneToItem = (gameStoreItem: GameStoreItem, gameItemConfig?: GameItemConfig): GameStoreItem => {
   if (!gameItemConfig) {

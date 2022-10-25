@@ -12,7 +12,7 @@ const SummaryTotalScoreWrapper = styled.div`
   }
 `
 
-const id = `summary-total-points`
+const id = 'summary-total-points'
 
 const SummaryTotalScore = memo(() => {
   const totalScore = useSelector(getUserTotalScore)
