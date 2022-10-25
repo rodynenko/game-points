@@ -1,0 +1,26 @@
+name: Build and Test Application
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.x
+          cache: npm
+      - name: Install and test
+        run: |
+          npm ci
+          npm run tslint
+          npm run test
+      - name: Build the app
+        run: npm build
