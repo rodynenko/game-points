@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import styled from '@emotion/styled'
 import { useDispatch } from 'react-redux'
 import { addNewUserItem } from 'redux/reducers/gameReducer'
@@ -6,7 +6,7 @@ import Button from 'components/Button'
 import { ItemKey } from 'types'
 import { gameItems } from 'config/gameConfig'
 
-interface GamePlayButton {
+interface GamePlayButtonProps {
   itemKey: ItemKey
 }
 
@@ -18,7 +18,7 @@ const GamePlayButtonBtn = styled(Button)<{ color: string }>`
   height: var(--button-size);
 `
 
-const GamePlayButton = ({ itemKey }: GamePlayButton) => {
+const GamePlayButton = ({ itemKey }: GamePlayButtonProps) => {
   const dispatch = useDispatch()
 
   const onClick = () => {
