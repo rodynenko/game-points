@@ -11,12 +11,19 @@ export const selectUserItems = createSelector(
 
 export const selectUserItemsList = createSelector(
   selectUserItems,
-  (items) => Object.keys(items).map((key) => ({
-    key,
-    label: gameItems[key].label,
-    amount: items[key].amount,
-    totalPoints: items[key].totalPoints
-  })).filter((t) => Boolean(t.amount))
+  (items) => {
+    const resultList = Object.keys(items)
+      .map((key) => ({
+        key,
+        label: gameItems[key].label,
+        amount: items[key].amount,
+        totalPoints: items[key].totalPoints
+      }))
+      .filter((t) => Boolean(t.amount))
+      .sort((a, b) => b.totalPoints - a.totalPoints)
+
+    return resultList
+  }
 )
 
 export const getUserBonuses = createSelector(

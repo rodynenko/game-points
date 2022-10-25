@@ -12,6 +12,7 @@ interface GamePlayButton {
 
 const GamePlayButtonBtn = styled(Button)<{ color: string }>`
   --button-size: 5rem;
+  font-size: 2rem;
   background-color: ${(p) => `var(--color-${p.color})`};
   width: var(--button-size);
   height: var(--button-size);

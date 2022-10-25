@@ -34,8 +34,9 @@ export const ItemLabel = styled.span<{ color: string }>`
   align-items: center;
   justify-content: center;
   border: 1px solid var(--text-color);
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
   border-radius: 4px;
   background-color: ${(p) => `var(--color-${p.color})`};
 `

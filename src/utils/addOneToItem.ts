@@ -7,7 +7,7 @@ export const addOneToItem =
       return gameStoreItem
     }
 
-    const amount = gameStoreItem?.amount || 0 + 1
+    const amount = (gameStoreItem?.amount || 0) + 1
     const bonuses = getBonuses(amount, gameItemConfig.bonusStrategy)
     const totalPoints = amount * gameItemConfig.points + bonuses
 
