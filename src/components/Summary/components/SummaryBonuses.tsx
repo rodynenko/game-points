@@ -20,7 +20,7 @@ const id = 'summary-bonus-points'
 const SummaryBonuses = memo(() => {
   const bonuses = useSelector(getUserBonuses)
   return (
-    <SummaryBonusesWrapper>
+    <SummaryBonusesWrapper role="region" aria-live="polite">
       <span id={id}>Bonuses</span>
       <span aria-labelledby={id}>{bonuses}</span>
     </SummaryBonusesWrapper>

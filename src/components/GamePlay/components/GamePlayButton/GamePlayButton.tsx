@@ -26,8 +26,12 @@ const GamePlayButton = ({ itemKey }: GamePlayButtonProps) => {
   }
 
   return (
-    <GamePlayButtonBtn onClick={onClick} color={gameItems[itemKey].color}>
-      {itemKey.toUpperCase()}
+    <GamePlayButtonBtn
+      onClick={onClick}
+      color={gameItems[itemKey].color}
+      aria-label={`Choose ${gameItems[itemKey].label} card`}
+    >
+      {gameItems[itemKey].label}
     </GamePlayButtonBtn>
   )
 } 

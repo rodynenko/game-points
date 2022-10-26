@@ -18,7 +18,7 @@ const id = 'summary-total-points'
 const SummaryTotalScore = memo(() => {
   const totalScore = useSelector(getUserTotalScore)
   return (
-    <SummaryTotalScoreWrapper>
+    <SummaryTotalScoreWrapper role="region" aria-live="polite">
       <span id={id}>Total</span>
       <span aria-labelledby={id}>{totalScore}</span>
     </SummaryTotalScoreWrapper>
